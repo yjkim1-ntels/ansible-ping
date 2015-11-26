@@ -1,0 +1,8 @@
+---
+- name: ping localhost
+  hosts: localhost
+  
+  tasks:
+
+  - name: download bar
+    ping:
