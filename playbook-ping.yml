@@ -1,6 +1,6 @@
 ---
 - name: ping localhost
-  hosts: centos
+  hosts: all
   
   tasks:
 
