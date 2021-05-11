@@ -1,12 +1,13 @@
 ---
 - hosts: all
   tasks:
-  - name: Creating an empty file
-    file:
-      path: "//root/my.conf"
-      state: touch
+  #- name: Creating an empty file
+  #  file:
+  #    path: "//root/my.conf"
+  #    state: touch
 
   - name: copy file between locations on the remote host
     copy:
       src: /etc/hosts
       dest: /tmp/test_file
+      remote_src: true
