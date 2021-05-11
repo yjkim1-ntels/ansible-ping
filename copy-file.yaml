@@ -1,15 +1,13 @@
 ---
-- name: create file 
-  hosts: kube_node
-  file: 
-       path: /root/my.conf
-       state: touch
-       owner: root
-       group: root
-       mode: 0600
+- hosts: all
+  tasks:
+  - name: Creating an empty file
+    file:
+      path: "//root/my.conf"
+      state: touch
 
-- name: copy file between locations on the remote host
-  copy:
-    src: /root/my.conf
-    remote_src: true
-    dest: /tmp/test_file2
+  - name: copy file between locations on the remote host
+    copy:
+      src: /root/my.conf
+      remote_src: true
+      dest: /tmp/test_file2
