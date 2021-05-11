@@ -8,6 +8,5 @@
 
   - name: copy file between locations on the remote host
     copy:
-      src: /root/my.conf
-#      remote_src: true
-      dest: /tmp/test_file2
+      src: /etc/hosts
+      dest: /tmp/test_file
