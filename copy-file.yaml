@@ -9,5 +9,5 @@
   - name: copy file between locations on the remote host
     copy:
       src: /root/my.conf
-      remote_src: true
+#      remote_src: true
       dest: /tmp/test_file2
