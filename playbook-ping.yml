@@ -1,6 +1,6 @@
 ---
 - name: ping localhost
-  hosts: kube-master
+  hosts: all
   
   tasks:
 
